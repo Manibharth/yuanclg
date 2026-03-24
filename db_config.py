@@ -9,7 +9,7 @@ from mysql.connector import Error
 #         Change these values to match YOUR MySQL setup
 # ─────────────────────────────────────────────
 DB_CONFIG = {
-    "host":     "https://manibharth.github.io/yuanclg/",       # MySQL server address (localhost = your own PC)
+    "host":     "localhost",       # MySQL server address (localhost = your own PC)
     "user":     "root",            # MySQL username
     "password": "yuan@123",        # MySQL password (leave "" if none)
     "database": "yuandatabase"     # The database name we created in setup.sql
