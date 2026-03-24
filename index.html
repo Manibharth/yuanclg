@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Login Portal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- PAGE 1: LOGIN -->
+  <div class="page active" id="page-login">
+    <div class="top-bar red-bar"></div>
+    <div class="center-wrap">
+      <div class="card">
+        <div class="card-icon">&#127891;</div>
+        <h1 class="card-title">Student Portal</h1>
+        <p class="card-sub">Sign in to your account</p>
+        <div class="alert alert-error" id="login-error"></div>
+        <form id="login-form" novalidate>
+          <label class="field-label lbl-red" for="l-user">USERNAME</label>
+          <input class="field-input" type="text" id="l-user" placeholder="enter your username" autocomplete="username" />
+          <label class="field-label lbl-red" for="l-pass">PASSWORD</label>
+          <input class="field-input" type="password" id="l-pass" placeholder="enter password" autocomplete="current-password" />
+          <label class="show-pw">
+            <input type="checkbox" id="show-pw-cb" />
+            <span>Show password</span>
+          </label>
+          <button type="submit" class="btn btn-red">LOGIN &nbsp;&rarr;</button>
+        </form>
+        <hr class="divider" />
+        <p class="switch-row">No account? <button class="link-btn lnk-red" data-goto="register">Register here</button></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- PAGE 2: REGISTER -->
+  <div class="page" id="page-register">
+    <div class="top-bar green-bar"></div>
+    <div class="center-wrap">
+      <div class="card">
+        <h1 class="card-title card-title-sm">&#128221; Create Account</h1>
+        <p class="card-sub">Fill in your details below</p>
+        <div class="alert alert-error"   id="reg-error"></div>
+        <div class="alert alert-success" id="reg-success"></div>
+        <form id="register-form" novalidate>
+          <label class="field-label lbl-green" for="r-name">FULL NAME</label>
+          <input class="field-input" type="text" id="r-name" placeholder="e.g. Manibharathi" />
+          <label class="field-label lbl-green" for="r-user">USERNAME <span class="req">*</span></label>
+          <input class="field-input" type="text" id="r-user" placeholder="choose a username" />
+          <label class="field-label lbl-green" for="r-email">EMAIL <span class="req">*</span></label>
+          <input class="field-input" type="email" id="r-email" placeholder="your@email.com" />
+          <label class="field-label lbl-green" for="r-pass">PASSWORD <span class="req">*</span></label>
+          <input class="field-input" type="password" id="r-pass" placeholder="min 6 characters" />
+          <button type="submit" class="btn btn-green">CREATE ACCOUNT</button>
+        </form>
+        <hr class="divider" />
+        <p class="switch-row">Already registered? <button class="link-btn lnk-green" data-goto="login">Login here</button></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- PAGE 3: DASHBOARD -->
+  <div class="page" id="page-dashboard">
+    <div class="top-bar green-bar"></div>
+    <div class="center-wrap">
+      <div class="card">
+        <div class="avatar" id="dash-avatar">YU</div>
+        <h1 class="card-title dash-title" id="dash-welcome">Welcome, yuan!</h1>
+        <p class="card-sub">You are successfully logged in</p>
+        <div class="info-card">
+          <div class="info-row"><span class="info-key">ID</span>        <span class="info-val" id="d-id">#1</span></div>
+          <div class="info-row"><span class="info-key">Full Name</span> <span class="info-val" id="d-name">Manibharathi</span></div>
+          <div class="info-row"><span class="info-key">Username</span>  <span class="info-val" id="d-user">yuan</span></div>
+          <div class="info-row"><span class="info-key">Email</span>     <span class="info-val small-text" id="d-email">manibharathi2k6@gmail.com</span></div>
+          <div class="info-row"><span class="info-key">Status</span>    <span class="badge-active">Active</span></div>
+        </div>
+        <button class="btn btn-logout" id="logout-btn">LOGOUT</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
