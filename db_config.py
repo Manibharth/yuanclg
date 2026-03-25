@@ -2,19 +2,20 @@ import mysql.connector
 
 # Step 2: Import the 'Error' class to catch MySQL-specific errors
 from mysql.connector import Error
-
+# Removed: app.config['MYSQL_DB'] = 'railway'
+# This module should not reference a Flask `app` object; database name is set in DB_CONFIG below.
 
 # ─────────────────────────────────────────────
 # Step 3: Define DB credentials in a dictionary
 #         Change these values to match YOUR MySQL setup
 # ─────────────────────────────────────────────
 DB_CONFIG = {
-    "host":     "localhost",       # MySQL server address (localhost = your own PC)
-    "user":     "root",            # MySQL username
-    "password": "yuan@123",        # MySQL password (leave "" if none)
-    "database": "yuandatabase"     # The database name we created in setup.sql
+    "host":     "crossover.proxy.rlwy.net",
+    "port":     51153,
+    "user":     "root",
+    "password": "sPMVGvXkRjGkHHSeqyKXrmKZhfzPRvny",
+    "database": "railway"
 }
-
 
 # ─────────────────────────────────────────────
 # Step 4: Define a function to create a connection
