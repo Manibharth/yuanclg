@@ -11,7 +11,7 @@
 
 // Step 1: Flask server address — must match server.py port
 // ✅ Replace with your actual Railway URL
-const API_URL = "https://yuanclg-production.railway.app";
+const API_URL = "https://manibharth.github.io/yuanclg/";
 
 // Tracks the currently logged-in user object
 let currentUser = null;
