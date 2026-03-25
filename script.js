@@ -10,7 +10,7 @@
 ─────────────────────────────────────────────────────── */
 
 // Step 1: Flask server address — must match server.py port
-const API_URL = "http://registration-project.railway.app";
+const API_URL = "https://your-app.railway.app";
 
 // Tracks the currently logged-in user object
 let currentUser = null;
