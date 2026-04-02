@@ -1,18 +1,3 @@
-# ══════════════════════════════════════════════════════════════════════
-# Server.py  —  Student Login Portal  |  Flask REST API
-# ══════════════════════════════════════════════════════════════════════
-#
-#   Endpoints:
-#     POST  /register   →  Create a new user account
-#     POST  /login      →  Authenticate and return user data
-#     GET   /user/<id>  →  Fetch a single user by ID
-#     GET   /users      →  List all users  (admin / debug use)
-#     PUT   /user/<id>  →  Update full_name or email
-#     DELETE /user/<id> →  Delete a user account
-#     GET   /health     →  Server + DB health check
-#
-# ══════════════════════════════════════════════════════════════════════
-
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 import os
